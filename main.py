@@ -12,7 +12,7 @@ def random_strings(char_num) -> str:
 class SpotifyGenerator:
     def __init__(self, username) -> None:
         self.username = username
-        self.email = '{}{}@gmail.com'.format(self.username, random_strings(5))
+        self.email = '{}{}@dripplay.tk'.format(self.username)
         self.password = base64.b64encode(username.encode()).decode()
         self.request_url = 'https://spclient.wg.spotify.com/signup/public/v1/account'
         self.headers = {
@@ -36,8 +36,8 @@ class SpotifyGenerator:
             'birth_year': '1969',
             'creation_flow': '',
             'creation_point': '"https://www.spotify.com/us/',
-            'displayname': self.username,
-            'username': self.username,
+            'displayname': 'shivang',
+            'username': 'shivang',
             'gender': random.choice(['male', 'female', 'neutral']),
             'iagree': '1',
             'key': 'a1e486e2729f46d6bb368d6b2bcda326',
@@ -46,8 +46,8 @@ class SpotifyGenerator:
             'send-email': '0',
             'thirdpartyemail': '0',
             'email': self.email,
-            'password': self.password,
-            'password_repeat': self.password
+            'password': 'shivanggupta',
+            'password_repeat': 'shivanggupta'
         }
     
     def generate_account(self) -> str:
